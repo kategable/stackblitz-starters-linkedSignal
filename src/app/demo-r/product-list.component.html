@@ -1,0 +1,46 @@
+<div *ngIf="productsResource.isLoading()">Loading...</div>
+<div class="filter-container">
+  <label for="category-filter" class="filter-label"
+    >Filter by Category:</label
+  >
+  <select
+    id="category-filter"
+    class="filter-select"
+    [value]="selectedCategory()"
+    (change)="selectCategory($event)"
+  >
+    <option value="all">All</option>
+    <option *ngFor="let category of categories()" [value]="category">
+      {{ category }}
+    </option>
+  </select>
+</div>
+
+<div class="product-table-container">
+  <table class="product-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Brand</th>
+        <th>Stock</th>
+        <th>Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of filteredProducts()">
+        <td>{{ product.id }}</td>
+        <td>{{ product.title }}</td>
+        <td>{{ product.price | currency }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.brand }}</td>
+        <td>{{ product.stock }}</td>
+        <td>{{ product.rating }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="productsResource.error()">{{ productsResource.error() }}</div>
+<button (click)="reload()">Reload Products</button>

@@ -1,0 +1,65 @@
+
+      .product-table-container {
+        margin: 20px;
+        overflow-x: auto;
+      }
+
+      .product-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 10px 0;
+      }
+
+      .product-table th,
+      .product-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      .product-table th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+      }
+
+      .product-table tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      .product-table tr:hover {
+        background-color: #f1f1f1;
+      }
+      .filter-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 0;
+      }
+
+      .filter-label {
+        font-size: 1rem;
+        font-weight: bold;
+        color: #333;
+      }
+
+      .filter-select {
+        padding: 5px 10px;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+      }
+
+      .filter-select:hover {
+        border-color: #007bff;
+      }
+
+      .filter-select:focus {
+        outline: none;
+        border-color: #0056b3;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+      }
+  
+      

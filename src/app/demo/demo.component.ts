@@ -23,7 +23,6 @@ import { Component, linkedSignal, signal } from '@angular/core';
       </li>
     </ul>
   </div>`,
-  standalone: true,
 })
 export class DemoComponent {
 

@@ -1,1 +1,29 @@
 /* Add application styles & imports to this file! */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px
+  }
+
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  button.active-route {
+    background-color: #005;
+    color: #fff;
+    border-color: #0056b3;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+ 
+  
