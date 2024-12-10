@@ -1,6 +1,10 @@
 {
-  "$schema": "node_modules/nx/schemas/project-schema.json",
   "name": "demo",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "prefix": "app",
+  "projectType": "application",
+  "sourceRoot": "apps/demo/src",
+  "generators": {},
   "targets": {
     "build": {
       "executor": "@angular/build:application",
@@ -22,17 +26,17 @@
       },
       "options": {
         "assets": [],
-        "index": "src/index.html",
-        "browser": "src/main.ts",
+        "index": "apps/demo/src/index.html",
+        "browser": "apps/demo/src/main.ts",
         "outputPath": "dist/demo",
         "polyfills": [
           "zone.js"
         ],
         "scripts": [],
         "styles": [
-          "src/global_styles.css"
+          "apps/demo/src/global_styles.css"
         ],
-        "tsConfig": "tsconfig.app.json"
+        "tsConfig": "apps/demo/tsconfig.app.json"
       }
     },
     "serve": {
@@ -47,9 +51,5 @@
       },
       "defaultConfiguration": "development"
     }
-  },
-  "prefix": "app",
-  "projectType": "application",
-  "generators": {},
-  "sourceRoot": "src"
+  }
 }

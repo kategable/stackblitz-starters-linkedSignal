@@ -1,5 +1,5 @@
 {
-  "name": "angular-starter",
+  "name": "@demo/source",
   "private": true,
   "scripts": {
     "ng": "ng",
@@ -24,7 +24,9 @@
     "@angular/build": "^19.0.0",
     "@angular/cli": "^19.0.0",
     "@angular/compiler-cli": "^19.0.0",
+    "@eslint/js": "~8.57.0",
     "@nx/angular": "20.2.1",
+    "@nx/eslint-plugin": "20.2.1",
     "@nx/workspace": "20.2.1",
     "@schematics/angular": "^19.0.0",
     "nx": "20.2.1",
