@@ -1,13 +1,13 @@
-import { CommonModule } from "@angular/common";
-import { Component, effect, linkedSignal, signal } from "@angular/core";
-import { Product } from "../Product";
-import { ProductService } from "../product.service";
+import { CommonModule } from '@angular/common';
+import { Component, effect, linkedSignal, signal } from '@angular/core';
+import { ProductService } from '../product.service';
+import { Product } from '@demo/models';
 
 @Component({
-  selector: "app-product-list",
-  templateUrl: "./product-list.component.html",
+  selector: 'app-product-list',
+  templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css'],
- 
+
   imports: [CommonModule],
 })
 export class ProductListComponent {
@@ -18,11 +18,11 @@ export class ProductListComponent {
     // Effect to react to changes in the resource's value
     effect(() => {
       if (this.productsResource.value()) {
-        console.log("Products loaded:", this.productsResource.value());
+        console.log('Products loaded:', this.productsResource.value());
       }
     });
   }
-  selectedCategory = signal<string>("all");
+  selectedCategory = signal<string>('all');
 
   categories = linkedSignal(() => {
     if (!this.productsResource.value()) return [];
@@ -38,7 +38,7 @@ export class ProductListComponent {
   // Linked signal for filtered products
   filteredProducts = linkedSignal(() => {
     const category = this.selectedCategory();
-    if (category === "all") {
+    if (category === 'all') {
       return this.productsResource.value(); // Return all products if "all" is selected
     }
     return this.productsResource

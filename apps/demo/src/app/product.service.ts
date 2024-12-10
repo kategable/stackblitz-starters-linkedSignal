@@ -1,8 +1,6 @@
 // product.service.ts
-import { Injectable, signal, resource } from '@angular/core';
-import { Product, Response } from './Product';
-
-
+import { Injectable, resource, signal } from '@angular/core';
+import { Response } from '@demo/models';
 @Injectable({
   providedIn: 'root',
 })
@@ -22,7 +20,7 @@ export class ProductService {
       if (!response.ok) {
         throw new Error('Failed to fetch products');
       }
-      const data =  response.json() as Promise<Response>;
+      const data = response.json() as Promise<Response>;
       return (await data).products;
     },
   });
@@ -32,4 +30,3 @@ export class ProductService {
     this.trigger.set(undefined);
   }
 }
-
